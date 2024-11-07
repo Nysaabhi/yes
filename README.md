@@ -278,14 +278,14 @@ body {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    color:     color: #FFD700;
+    color: #fff;
     transition: all 0.3s ease;
     padding: 5px;
     cursor: pointer;
 }
 
 .nav-item i {
-    color: #FFD700;
+    color: #fff;
     font-size: 20px;
     margin-bottom: 4px;
 }
