@@ -440,31 +440,41 @@ body {
         </div>
     </div>
 
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-        <div class="nav-container">
-            <div class="nav-item active">
+<!-- Bottom Navigation -->
+<nav class="bottom-nav">
+    <div class="nav-container">
+        <div class="nav-item active" data-page="home">
+            <a href="https://nysaabhi.github.io/chat">
                 <i class="fas fa-home"></i>
-                <span>Home</span>
-            </div>
-            <div class="nav-item">
-                <i class="fas fa-chart-line"></i>
-                <span>Trending</span>
-            </div>
-            <div class="nav-item">
-                <i class="fas fa-compass"></i>
-                <span>Explore</span>
-            </div>
-            <div class="nav-item">
-                <i class="fas fa-bookmark"></i>
-                <span>Saved</span>
-            </div>
-            <div class="nav-item">
-                <i class="fas fa-user"></i>
-                <span>Profile</span>
-            </div>
+            </a>
+            <span>Home</span>
         </div>
-    </nav>
+        <div class="nav-item" data-page="tournament">
+            <a href="https://nysaabhi.github.io/mymom">
+                <i class="fas fa-trophy"></i>
+            </a>
+            <span>Tournament</span>
+        </div>
+        <div class="nav-item" data-page="gallery">
+            <a href="gallery.html">
+                <i class="fas fa-vr-cardboard"></i>
+            </a>
+            <span>Gallery</span>
+        </div>
+        <div class="nav-item" data-page="location">
+            <a href="location.html">
+                <i class="fas fa-map"></i>
+            </a>
+            <span>Location</span>
+        </div>
+        <div class="nav-item" data-page="listings">
+            <a href="listings.html">
+                <i class="fas fa-list"></i>
+            </a>
+            <span>Listings</span>
+        </div>
+    </div>
+</nav>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
