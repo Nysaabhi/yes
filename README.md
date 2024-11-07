@@ -294,11 +294,11 @@ body {
 }
 
 .nav-item.active {
-    color: var(--primary-color);
+    color: #FFD700;
 }
 
 .nav-item:hover {
-    color: var(--primary-color);
+    color: #FFD700;
     transform: translateY(-2px);
 }
 
