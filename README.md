@@ -285,18 +285,25 @@ body {
 }
 
 .nav-item i {
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 4px;
-}
-
-.nav-item span {
-    font-size: 12px;
-}
-
-.nav-item.active {
-    color: #FFD700;
-}
+          color: #fff;
+          font-size: 20px;
+          margin-bottom: 4px;
+          transition: all 0.3s ease;
+        }
+      
+        .nav-item span {
+          font-size: 12px;
+          transition: all 0.3s ease;
+        }
+      
+        .nav-item.active {
+          color: #fff;
+        }
+      
+        .nav-item.active i {
+          color: #fff;
+          transform: translateY(-2px);
+        }
 
 .nav-item:hover {
     color: #FFD700;
