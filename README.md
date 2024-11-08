@@ -200,7 +200,7 @@ body {
 /* Chat Input */
 .chat-input-container {
     position: fixed;
-    top: 440px;
+    top: 420px;
     left: 0;
     right: 0;
     height: 70px;
@@ -342,7 +342,7 @@ body {
     }
 
     .chat-input-container {
-        bottom: 5px;
+        top: 420px;
     }
 
     .connect-wallet {
@@ -450,6 +450,41 @@ body {
         </div>
     </div>
 
+<!-- Bottom Navigation -->
+<nav class="bottom-nav">
+    <div class="nav-container">
+        <div class="nav-item active" data-page="home">
+            <a href="https://nysaabhi.github.io/chat">
+                <i class="fas fa-home"></i>
+            </a>
+            <span>Home</span>
+        </div>
+        <div class="nav-item" data-page="tournament">
+            <a href="https://nysaabhi.github.io/mymom">
+                <i class="fas fa-trophy"></i>
+            </a>
+            <span>Tournament</span>
+        </div>
+        <div class="nav-item" data-page="gallery">
+            <a href="gallery.html">
+                <i class="fas fa-vr-cardboard"></i>
+            </a>
+            <span>Gallery</span>
+        </div>
+        <div class="nav-item" data-page="location">
+            <a href="location.html">
+                <i class="fas fa-map"></i>
+            </a>
+            <span>Location</span>
+        </div>
+        <div class="nav-item" data-page="listings">
+            <a href="listings.html">
+                <i class="fas fa-list"></i>
+            </a>
+            <span>Listings</span>
+        </div>
+    </div>
+</nav>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
