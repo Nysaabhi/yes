@@ -97,6 +97,7 @@ body {
     z-index: 10;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 215, 0, 0.1);
+    overflow: hidden;
 }
 
 /* Chat Header */
@@ -109,6 +110,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 11;
+    flex-shrink: 0;
 }
 
 .chat-status {
@@ -133,7 +135,6 @@ body {
     flex: 1;
     overflow-y: auto;
     padding: 20px;
-    margin-bottom: var(--input-container-height);
     position: relative;
     z-index: 11;
     scrollbar-width: thin;
@@ -158,6 +159,7 @@ body {
     gap: 12px;
     max-width: 85%;
     animation: messageSlide 0.3s ease-out;
+    margin-bottom: 16px;
 }
 
 .bot-message {
@@ -194,10 +196,7 @@ body {
 
 /* Chat Input */
 .chat-input-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     height: var(--input-container-height);
     padding: 16px;
     background: rgba(26, 26, 31, 0.98);
@@ -206,6 +205,7 @@ body {
     gap: 12px;
     align-items: center;
     z-index: 12;
+    flex-shrink: 0;
 }
 
 #chatInput {
@@ -377,11 +377,6 @@ body {
     .bottom-nav {
         background: rgba(26, 26, 31, 0.98);
     }
-}
-
-/* Ensure proper spacing for messages near the bottom */
-.chat-messages .message:last-child {
-    margin-bottom: 16px;
 }
     </style>
 </head>
