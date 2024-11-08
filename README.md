@@ -342,7 +342,7 @@ body {
     }
 
     .chat-input-container {
-        bottom: 60px;
+        bottom: 120px;
     }
 
     .connect-wallet {
