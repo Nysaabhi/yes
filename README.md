@@ -200,7 +200,7 @@ body {
 /* Chat Input */
 .chat-input-container {
     position: fixed;
-    top: 420px;
+    bottom: 60px;
     left: 0;
     right: 0;
     height: 70px;
@@ -342,7 +342,7 @@ body {
     }
 
     .chat-input-container {
-        top: 420px;
+        bottom: 60px;
     }
 
     .connect-wallet {
