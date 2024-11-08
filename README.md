@@ -83,11 +83,11 @@ body {
 
 /* Chatbot Container */
 .chatbot-container {
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 60px;
     left: 0;
     right: 0;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 60px);
     background: rgba(26, 26, 31, 0.95);
     display: flex;
     flex-direction: column;
@@ -102,7 +102,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    height: 60px;
     padding: 15px;
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(253, 185, 49, 0.1));
     border-bottom: 1px solid rgba(255, 215, 0, 0.2);
@@ -131,9 +131,11 @@ body {
 
 /* Chat Messages */
 .chat-messages {
-    margin-top: 60px;
-    margin-bottom: 70px;
-    height: calc(100% - 130px);
+    position: absolute;
+    top: 60px;
+    bottom: 70px;
+    left: 0;
+    right: 0;
     overflow-y: auto;
     padding: 20px;
     display: flex;
@@ -197,10 +199,11 @@ body {
 
 /* Chat Input */
 .chat-input-container {
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    bottom: 60px;
     left: 0;
     right: 0;
+    height: 70px;
     padding: 16px;
     border-top: 1px solid rgba(255, 215, 0, 0.1);
     display: flex;
@@ -285,25 +288,25 @@ body {
 }
 
 .nav-item i {
-          color: #fff;
-          font-size: 20px;
-          margin-bottom: 4px;
-          transition: all 0.3s ease;
-        }
-      
-        .nav-item span {
-          font-size: 12px;
-          transition: all 0.3s ease;
-        }
-      
-        .nav-item.active {
-          color: #fff;
-        }
-      
-        .nav-item.active i {
-          color: #fff;
-          transform: translateY(-2px);
-        }
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-item span {
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.nav-item.active {
+    color: #fff;
+}
+
+.nav-item.active i {
+    color: #fff;
+    transform: translateY(-2px);
+}
 
 .nav-item:hover {
     color: #FFD700;
@@ -332,11 +335,10 @@ body {
 @media (max-width: 768px) {
     .chatbot-container {
         height: calc(100vh - 60px);
-        top: 60px;
     }
 
     .chat-messages {
-        margin-bottom: 130px;
+        bottom: 70px;
     }
 
     .chat-input-container {
@@ -399,7 +401,7 @@ body {
 
 /* Ensure proper spacing for messages near the bottom */
 .chat-messages .message:last-child {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
     </style>
 </head>
