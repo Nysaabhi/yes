@@ -14,6 +14,9 @@
     --text-light: #ffffff;
     --text-dark: #000000;
     --accent-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --header-height: 60px;
+    --bottom-nav-height: 60px;
+    --input-container-height: 70px;
 }
 
 * {
@@ -39,10 +42,10 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 30;
     border-bottom: 2px solid var(--primary-color);
     backdrop-filter: blur(10px);
-    height: 60px;
+    height: var(--header-height);
 }
 
 .header-content {
@@ -84,24 +87,20 @@ body {
 /* Chatbot Container */
 .chatbot-container {
     position: fixed;
-    top: 60px;
+    top: var(--header-height);
     left: 0;
     right: 0;
-    height: calc(100vh - 60px);
+    bottom: var(--bottom-nav-height);
     background: rgba(26, 26, 31, 0.95);
     display: flex;
     flex-direction: column;
-    z-index: 999;
+    z-index: 10;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 215, 0, 0.1);
 }
 
 /* Chat Header */
 .chat-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     height: 60px;
     padding: 15px;
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(253, 185, 49, 0.1));
@@ -109,7 +108,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
+    z-index: 11;
 }
 
 .chat-status {
@@ -131,16 +130,12 @@ body {
 
 /* Chat Messages */
 .chat-messages {
-    position: absolute;
-    top: 60px;
-    bottom: 70px;
-    left: 0;
-    right: 0;
+    flex: 1;
     overflow-y: auto;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    margin-bottom: var(--input-container-height);
+    position: relative;
+    z-index: 11;
     scrollbar-width: thin;
     scrollbar-color: var(--primary-color) transparent;
 }
@@ -199,18 +194,18 @@ body {
 
 /* Chat Input */
 .chat-input-container {
-    position: fixed;
-    bottom: 60px;
+    position: absolute;
+    bottom: 0;
     left: 0;
     right: 0;
-    height: 70px;
+    height: var(--input-container-height);
     padding: 16px;
+    background: rgba(26, 26, 31, 0.98);
     border-top: 1px solid rgba(255, 215, 0, 0.1);
     display: flex;
     gap: 12px;
     align-items: center;
-    background: rgba(26, 26, 31, 0.95);
-    z-index: 2;
+    z-index: 12;
 }
 
 #chatInput {
@@ -259,21 +254,23 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(26, 26, 31, 0.95);
+    height: var(--bottom-nav-height);
+    background: rgba(26, 26, 31, 0.98);
     padding: 8px 0;
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(255, 215, 0, 0.2);
-    z-index: 1000;
-    height: 60px;
+    z-index: 20;
 }
 
 .nav-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 100%;
     max-width: 600px;
     margin: 0 auto;
-    height: 100%;
+    position: relative;
+    z-index: 21;
 }
 
 .nav-item {
@@ -285,6 +282,8 @@ body {
     transition: all 0.3s ease;
     padding: 5px;
     cursor: pointer;
+    position: relative;
+    z-index: 22;
 }
 
 .nav-item i {
@@ -333,25 +332,6 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .chatbot-container {
-        height: calc(100vh - 60px);
-    }
-
-    .chat-messages {
-        bottom: 70px;
-    }
-
-    .chat-input-container {
-        bottom: 60px;
-    }
-
-    .connect-wallet {
-        padding: 8px 16px;
-        font-size: 0.9em;
-    }
-}
-
-@media (max-width: 480px) {
     .header {
         padding: 8px 12px;
     }
