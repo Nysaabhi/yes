@@ -200,7 +200,7 @@ body {
 /* Chat Input */
 .chat-input-container {
     position: fixed;
-    bottom: 60px;
+    top: 440px;
     left: 0;
     right: 0;
     height: 70px;
